@@ -32,14 +32,14 @@
 
         <section class="response">
           <p>
-            Hello {{name}},
+            Hello {{recipientName}},
           </p>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, laboriosam illum doloremque ducimus impedit autem velit magni quidem eligendi tempore culpa provident esse itaque deleniti, nemo vitae veritatis pariatur! Rerum.
           </p>
           <p>
             Kind regards,<br />
-            {{recipientName}}
+            {{name}}
           </p>
         </section>
 
@@ -73,7 +73,7 @@ export default {
 
 .container {
   margin: 0 auto;
-  max-width: 1400px;
+  max-width: 830px;
   padding: 0 8%;
 }
 
@@ -118,9 +118,14 @@ main {
 
 .response {
   padding: 30px;
-  max-width: 635px;
   margin: 0 auto 30px;
   border: 1px solid #666666;
+
+  p {
+    &:last-of-type {
+      margin: 0;
+    }
+  }
 }
 
 p {
