@@ -1,0 +1,26 @@
+[
+  {
+    "content": "I’d love to, but I’m afraid I don’t have the time.",
+    "tags": "polite"
+  },
+  {
+    "content": "If I said yes, I’m afraid that I would let you down. Sorry, but no.",
+    "tags": "polite"
+  },
+  {
+    "content": "That doesn’t fit my schedule.",
+    "tags": "formal"
+  },
+  {
+    "content": "No.",
+    "tags": "rude"
+  },
+  {
+    "content": "You caught me at a terrible time and I’m not able to help.",
+    "tags": "polite"
+  },
+  {
+    "content": "It’s not a good fit for me.",
+    "tags": "honest"
+  }
+]
