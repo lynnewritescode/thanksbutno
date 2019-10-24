@@ -23,4 +23,8 @@ html {
   box-sizing: border-box;
   margin: 0;
 }
+
+body {
+  background: #ebebdd;
+}
 </style>

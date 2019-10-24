@@ -43,7 +43,9 @@
           </p>
         </section>
 
-        <button class="copyBtn">Copy response!</button>
+        <div class="center">
+          <button class="copyBtn">Copy response!</button>
+        </div>
       </div>
     </main>
   </div>
@@ -76,29 +78,7 @@ export default {
 }
 
 header {
-  padding: 30px 0 50px;
-}
-
-.title {
-  transform: matrix(1, -0.1, 0, 1, 0, 0);
-  -ms-transform: matrix(1, -0.1, 0, 1, 0, 0);
-  -webkit-transform: matrix(1, -0.1, 0, 1, 0, 0);
-  font-family: "Oswald", Sans-serif;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 70px;
-  text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 20px;
-  color: #333333;
-  word-spacing: 5px;
-  margin-bottom: 15px;
-  transform: matrix(1, -0.1, 0, 1, 0, 0);
-  -ms-transform: matrix(1, -0.1, 0, 1, 0, 0);
-  -webkit-transform: matrix(1, -0.1, 0, 1, 0, 0);
+  padding: 30px 0;
 }
 
 .center {
@@ -106,12 +86,11 @@ header {
 }
 
 .inputs {
-  display: flex;
-  align-items: center;
   margin: 0 0 30px;
 
   .input {
-    margin: 0 20px 0 0;
+    width: 100%;
+    margin: 0 0 15px;
   }
 
   label {
@@ -126,12 +105,21 @@ header {
     margin: 5px 0 0;
     display: block;
     min-width: 200px;
+
+    &:focus {
+      border: 2px solid #00dfff;
+    }
   }
+}
+
+main {
+  padding: 0 0 80px;
 }
 
 .response {
   padding: 30px;
-  margin: 0 0 40px;
+  max-width: 635px;
+  margin: 0 auto 30px;
   border: 1px solid #666666;
 }
 
@@ -146,7 +134,8 @@ p {
   font-family: inherit;
   font-size: inherit;
   cursor: pointer;
-  padding: 25px 80px;
+  width: 100%;
+  padding: 25px 45px;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -172,6 +161,45 @@ p {
   &:hover {
     box-shadow: 0 4px #ab3c3c;
     top: 2px;
+  }
+
+  &:focus {
+    border: 2px solid #00dfff;
+    box-shadow: 0 4px #00dfff;
+  }
+}
+
+@media (min-width: 700px) {
+  .inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 -20px 30px;
+
+    .input {
+      margin: 0 20px 0;
+    }
+  }
+
+  .copyBtn {
+    width: auto;
+  }
+}
+
+@media (min-width: 900px) {
+  header {
+    padding: 40px 0 50px;
+  }
+
+  .inputs {
+    .input {
+      width: auto;
+      min-width: 300px;
+    }
+  }
+
+  .response {
+    margin: 0 auto 40px;
   }
 }
 </style>
