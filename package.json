@@ -1,0 +1,17 @@
+{
+  "name": "thanksbutno",
+  "version": "1.0.0",
+  "description": "An app to help you say no to requests.",
+  "author": "Lynne Finnigan &amp; Laura Weatherhead",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {}
+}
