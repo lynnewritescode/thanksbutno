@@ -1,17 +1,13 @@
 <template>
   <div>
     <header>
-      <div class="container">
+      <div class="container center">
         <logo />
       </div>
     </header>
 
     <main>
       <div class="container">
-        <h2 class="subtitle">
-          An app to help you say no to requests.
-        </h2>
-
         <div class="inputs">
           <div class="input">
             <label for="yourNameInput">Enter your name</label>
@@ -46,6 +42,8 @@
             {{recipientName}}
           </p>
         </section>
+
+        <button class="copyBtn">Copy response!</button>
       </div>
     </main>
   </div>
@@ -69,28 +67,38 @@ export default {
 </script>
 
 <style lang="scss">
+@import url(https://fonts.googleapis.com/css?family=Oswald:400|Open+Sans:700);
+
 .container {
   margin: 0 auto;
   max-width: 1400px;
   padding: 0 8%;
 }
 
+header {
+  padding: 30px 0 50px;
+}
+
 .title {
-  font-family: "Quicksand", "Source Sans Pro", -apple-system, BlinkMacSystemFont,
-    "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
+  transform: matrix(1, -0.1, 0, 1, 0, 0);
+  -ms-transform: matrix(1, -0.1, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, -0.1, 0, 1, 0, 0);
+  font-family: "Oswald", Sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 70px;
+  text-shadow: 4px 5px #e6e6d8, 6px 7px #c6a39a;
 }
 
 .subtitle {
   font-weight: 300;
-  font-size: 42px;
-  color: #526488;
+  font-size: 20px;
+  color: #333333;
   word-spacing: 5px;
-  padding-bottom: 15px;
+  margin-bottom: 15px;
+  transform: matrix(1, -0.1, 0, 1, 0, 0);
+  -ms-transform: matrix(1, -0.1, 0, 1, 0, 0);
+  -webkit-transform: matrix(1, -0.1, 0, 1, 0, 0);
 }
 
 .center {
@@ -123,10 +131,47 @@ export default {
 
 .response {
   padding: 30px;
+  margin: 0 0 40px;
   border: 1px solid #666666;
 }
 
 p {
   margin: 0 0 15px;
+}
+
+.copyBtn {
+  appearance: none;
+  -webkit-appearance: none;
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 25px 80px;
+  display: inline-block;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  outline: none;
+  position: relative;
+  background: #cb4e4e;
+  color: #fff;
+  box-shadow: 0 6px #ab3c3c;
+  -webkit-transition: none;
+  -moz-transition: none;
+  transition: none;
+
+  &:after {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    box-shadow: 0 4px #ab3c3c;
+    top: 2px;
+  }
 }
 </style>
