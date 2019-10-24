@@ -168,6 +168,10 @@ p {
     top: 2px;
   }
 
+  &:active {
+    background: #ab3c3c;
+  }
+
   &:focus {
     border: 2px solid #00dfff;
     box-shadow: 0 4px #00dfff;
